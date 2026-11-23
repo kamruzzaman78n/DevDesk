@@ -1,0 +1,6 @@
+{
+  "name": "DevDesk",
+  "description": "Your entire developer workflow. One workspace. Code snippets, Markdown notes, API studio, developer utilities, command library, error archive, project hub, and focus analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

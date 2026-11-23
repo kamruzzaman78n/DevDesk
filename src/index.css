@@ -1,0 +1,161 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    --accent: #4F46E5;
+    --accent-hover: #4338CA;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  code, pre, kbd, .font-mono {
+    font-family: var(--font-mono);
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Clean, restrained scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.28);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.45);
+}
+
+/* Rendered Markdown prose styles (used inside DevNotes sanitized container) */
+.devdesk-prose {
+  line-height: 1.68;
+  font-size: 0.9375rem;
+}
+
+.devdesk-prose h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.devdesk-prose h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.35rem;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.devdesk-prose h3 {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  margin-top: 1.1rem;
+  margin-bottom: 0.45rem;
+}
+
+.devdesk-prose p {
+  margin-bottom: 0.85rem;
+}
+
+.devdesk-prose ul, .devdesk-prose ol {
+  margin-bottom: 0.85rem;
+  padding-left: 1.35rem;
+}
+
+.devdesk-prose ul {
+  list-style-type: disc;
+}
+
+.devdesk-prose ol {
+  list-style-type: decimal;
+}
+
+.devdesk-prose li {
+  margin-bottom: 0.3rem;
+}
+
+.devdesk-prose pre {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  padding: 0.875rem 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+  background-color: #0F172A;
+  color: #E2E8F0;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.devdesk-prose code:not(pre code) {
+  font-family: var(--font-mono);
+  font-size: 0.825em;
+  padding: 0.15rem 0.35rem;
+  border-radius: 0.25rem;
+  background-color: rgba(99, 102, 241, 0.12);
+}
+
+.devdesk-prose blockquote {
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 0.5rem;
+  background-color: rgba(148, 163, 184, 0.06);
+}
+
+.devdesk-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.devdesk-prose th, .devdesk-prose td {
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+.devdesk-prose th {
+  font-weight: 600;
+  background-color: rgba(148, 163, 184, 0.08);
+}
+
+.devdesk-prose a {
+  color: #6366F1;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
